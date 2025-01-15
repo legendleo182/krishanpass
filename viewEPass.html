@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>View e-Bus Pass | DTC</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://dtcpass.delhi.gov.in/images/DTC1.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://dtcpass.delhi.gov.in/css/style.css">
+    <script>
+        // Function to get URL parameters
+        function getPassNumber() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get('passno');
+        }
+
+        // Function to load pass details
+        function loadPassDetails() {
+            const passNo = getPassNumber();
+            if (passNo) {
+                document.getElementById('passNumber').textContent = passNo;
+                // Here you can add logic to fetch and display pass details
+            } else {
+                window.location.href = '/'; // Redirect to home if no pass number
+            }
+        }
+    </script>
+</head>
+<body onload="loadPassDetails()">
+    <div class="page text-center">
+        <main class="page-content">
+            <section class="section-50">
+                <div class="shell">
+                    <div class="range range-xs-center">
+                        <div class="cell-xs-12">
+                            <h3>e-Bus Pass Details</h3>
+                            <div class="pass-details">
+                                <p>Pass Number: <span id="passNumber"></span></p>
+                                <!-- Add more pass details here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

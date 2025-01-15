@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="wide wow-animation smoothscroll scrollTo desktop portrait rd-navbar-fixed-linked">
 <head>
     <title>View e-Bus Pass | DTC</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <link rel="icon" href="https://dtcpass.delhi.gov.in/images/DTC1.png" type="image/x-icon">
     <link rel="stylesheet" href="https://dtcpass.delhi.gov.in/css/style.css">
     <script>
@@ -23,25 +25,41 @@
                 window.location.href = '/'; // Redirect to home if no pass number
             }
         }
+
+        function noBack() {
+            window.history.forward();
+        }
+        noBack();
     </script>
 </head>
 <body onload="loadPassDetails()">
     <div class="page text-center">
-        <main class="page-content">
-            <section class="section-50">
+        <main class="page-content" style="background-color:#d9eeef;">
+            <section class="section-10 section-md-14">
                 <div class="shell">
                     <div class="range range-xs-center">
-                        <div class="cell-xs-12">
-                            <h3>e-Bus Pass Details</h3>
-                            <div class="pass-details">
-                                <p>Pass Number: <span id="passNumber"></span></p>
-                                <!-- Add more pass details here -->
+                        <div class="cell-xs-20 cell-md-12 offset-top-10 offset-md-top-0 text-left">
+                            <div class="inset-md-left-40">
+                                <div class="offset-top-30">
+                                    <h3>e-Bus Pass Details</h3>
+                                    <div class="pass-details">
+                                        <p>Pass Number: <span id="passNumber"></span></p>
+                                        <!-- Add more pass details here -->
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
         </main>
+        <footer class="section-50 page-footer bg-catskill" style="background-color:#01a2a6;">
+            <div class="shell">
+                <div class="range range-xs-center range-sm-middle text-md-left">
+                    <!-- Footer content here -->
+                </div>
+            </div>
+        </footer>
     </div>
 </body>
 </html>

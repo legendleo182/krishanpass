@@ -1,6 +1,6 @@
 {
   "routes": [
-    { "src": "/viewEPass", "dest": "/viewEPass.html" },
+    { "src": "/viewEPass(?:\\?passno=[^/]*)?", "dest": "/viewEPass.html" },
     { "src": "/(.*)", "dest": "/$1" }
   ]
 }
